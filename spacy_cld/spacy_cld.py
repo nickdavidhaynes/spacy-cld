@@ -7,10 +7,10 @@ class LanguageDetector(object):
 
     name = 'cld'
 
-    def __init__(self, nlp, attrs=('detect_languages')):
-        self._detect_languages, = attrs
-        Doc.set_extension(self._detect_languages, getter=self.detect_languages)
-        Span.set_extension(self._detect_languages, getter=self.detect_languages)
+    def __init__(self, nlp, attrs=('languages')):
+        _detect_languages = attrs
+        Doc.set_extension(_detect_languages, getter=self.detect_languages)
+        Span.set_extension(_detect_languages, getter=self.detect_languages)
 
     def __call__(self, doc):
         '''Apply the language detector as a pipeline component.'''
