@@ -7,7 +7,7 @@ class LanguageDetector(object):
 
     name = 'cld'
 
-    def __init__(self, nlp, attrs=('languages')):
+    def __init__(self, attrs=('languages')):
         _detect_languages = attrs
         Doc.set_extension(_detect_languages, getter=self.detect_languages)
         Span.set_extension(_detect_languages, getter=self.detect_languages)
