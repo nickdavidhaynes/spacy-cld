@@ -18,5 +18,12 @@ class LanguageDetector(object):
         return doc
 
     def detect_languages(self, text):
-        '''Thin wrapper around CLD's language detector.'''
-        return detect(text.text)
+        '''Thin wrapper around pycld2 API, which itself is a thin wrapper
+        around the original CLD library.'''
+        _, _, results = detect(text.text)
+        languages = {}
+        for (name, code, confidence, _) in results:
+            if name != 'Unknown':
+                languages[code] = {'name': name,
+                                   'confidence': confidence / 100}
+        return languages
