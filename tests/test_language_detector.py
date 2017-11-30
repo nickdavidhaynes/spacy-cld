@@ -27,3 +27,13 @@ def test_bilingual_doc():
 def test_english_span():
     doc = nlp('This is a sentence of English text.')
     assert 'en' in doc[1:-1]._.languages
+
+
+def test_unknown_not_in_languages():
+    doc = nlp('This is a sentence of English text.')
+    assert 'un' not in doc._.languages
+
+
+def test_unknown_not_in_language_scores():
+    doc = nlp('This is a sentence of English text.')
+    assert 'un' not in doc._.language_scores.keys()
