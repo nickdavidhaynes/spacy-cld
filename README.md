@@ -1,5 +1,7 @@
 # spaCy-CLD: Bringing simple language detection to spaCy
 
+This package is a [spaCy 2.0 extension](https://spacy.io/usage/processing-pipelines#section-extensions) that adds language detection to spaCy's text processing pipeline. Inspired from a discussion [here](https://github.com/explosion/spaCy/issues/1172).
+
 ## Installation
 
 `pip install spacy_cld`
