@@ -17,7 +17,10 @@ def get_scores(text, cld_results=None):
 
 
 def detect_languages(text):
-    _, _, results = detect(text.text)
+    try:
+        _, _, results = detect(text.text)
+    except:
+        results = [[None, "error", 0.0, None]]
     return results
 
 
