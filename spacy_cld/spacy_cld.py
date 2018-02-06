@@ -1,4 +1,4 @@
-from pycld2 import detect
+from pycld2 import detect, error as pycld_error
 from spacy.tokens import Doc, Span
 
 
@@ -19,7 +19,7 @@ def get_scores(text, cld_results=None):
 def detect_languages(text):
     try:
         _, _, results = detect(text.text)
-    except:
+    except pycld_error as err:
         results = [[None, "error", 0.0, None]]
     return results
 
