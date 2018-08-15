@@ -12,7 +12,7 @@ def get_languages(text, cld_results=None):
 def get_scores(text, cld_results=None):
     if cld_results is None:
         cld_results = detect_languages(text)
-    return {lang: score / 100 for (_, lang, score, _)
+    return {lang: score / 100. for (_, lang, score, _)
             in cld_results if lang != 'un'}
 
 
