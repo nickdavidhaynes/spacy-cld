@@ -1,2 +1,2 @@
+cld2-cffi>=0.1.4
 spacy>=2.0.0
-pycld2==0.31
