@@ -6,6 +6,14 @@ This package is a [spaCy 2.0 extension](https://spacy.io/usage/processing-pipeli
 
 `pip install spacy_cld`
 
+### Windows Prerequisite
+
+This package uses the `pycld2` Python extension. On Windows, you must manually install this extension before installing `spacy_cld`. Precompiled binaries are available [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycld2). Download the correct version for your Python version and install the package using `pip`. 
+
+i.e. for Python 3.7 on a 64-bit machine, run the following from the same directory as the downloaded file (Note: the filename may differ for the latest version):
+
+`pip install pycld2-0.31-cp37-cp37m-win_amd64.whl`
+
 ## Usage
 
 Adding the spaCy-CLD component to the processing pipeline is relatively simple:
