@@ -29,7 +29,7 @@ def setup_package():
         packages=find_packages(),
         install_requires=[
             'spacy>=2.0.0,<3.0.0',
-            'pycld2>=0.31'],
+            'cld2-cffi>=0.1.4'],
         zip_safe=False,
     )
 
